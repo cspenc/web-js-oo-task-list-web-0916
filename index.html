@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/lib/jquery-2.1.1.min.js"></script>
   <script src="js/lib/underscore.min.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/models/list.js"></script>
   <script src="js/models/task.js"></script>
-  <script src="js/controllers/lists.controller.js"></script>
-  <script src="js/controllers/tasks.controller.js"></script>
+  <script src="js/controllers/lists/create_list.js"></script>
+  <script src="js/controllers/lists/delete_list.js"></script>
+  <script src="js/controllers/tasks/create_task.js"></script>
+  <script src="js/controllers/tasks/delete_task.js"></script>
   <script src="js/app.js"></script>
 </head>
 <body>
   <div id="wrapper">
     <h1>my task list</h1>
 
-    <form id="add_list" action="#" methos="post">
+    <form id="add_list" action="#" method="post">
       <label for="list_title">Add a new list:</label>
       <input type="text" id="list_title" name="list_title" placeholder="title">
       <input type="submit" value="(+) add">
     </form><!-- #add_list -->
-    
+
     <form id="add_task" action="#" method="post">
       <label for="select_list">Select List:</label>
       <select id="select_list" name="select_list"></select>
@@ -32,9 +35,9 @@
       <input type="text" id="task_priority" name="task_priority" placeholder="priority">
       <input type="submit" value="(+) add">
     </form><!-- #add_task -->
-    
+
     <section id="lists"></section>
-    
+
   </div><!-- #wrapper -->
 </body>
 </html>
