@@ -5,6 +5,5 @@ function deleteList(list_id) {
 			tasks: store().tasks.filter((task) => { return task.list_id !== list_id})
 		}
 	))
-
 	readFromStore()
 }
